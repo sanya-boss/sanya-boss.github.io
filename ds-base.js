@@ -10,6 +10,16 @@
   }
   const s = document.createElement('script');
   s.src = base + '/_ds_bundle.js';
-  s.onerror = () => console.error('ds-base.js: failed to load ' + s.src + ' — if this is a consuming project, point the base line in ds-base.js at the bound _ds/<folder> tree relative to this page (e.g. _ds/<folder> at the project root, ../_ds/<folder> one level down); in a fresh design system this can just mean the bundle is not compiled yet');
+  s.onerror = () => console.error('ds-base.js: failed to load ' + s.src + ' — if this is a consuming project, point the base line in ds-base.js at the bound _ds/<folder> tree relative to this file.');
   document.head.appendChild(s);
+
+  // Keep the ambient video above the page background while preserving the
+  // original visual layering: video -> shade -> content.
+  const ambientStyle = document.createElement('style');
+  ambientStyle.textContent = `
+    [data-m="ambient"] { z-index: 0 !important; }
+    [data-m="shade"] { z-index: 1 !important; }
+    [data-m="page"] { z-index: 2 !important; }
+  `;
+  document.head.appendChild(ambientStyle);
 })();
