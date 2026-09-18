@@ -512,12 +512,13 @@ class Component extends DCLogic {
   }
 
   cvHref() {
-    const file = { ru: "Aleksandr Mezennoi CV Document.dc.html",
-                   en: "Aleksandr Mezennoi CV Document ENG.dc.html",
-                   et: "Aleksandr Mezennoi CV Document EST.dc.html" }[this.state.lang] ||
-                 "Aleksandr Mezennoi CV Document.dc.html";
-    return encodeURI(file);
-  }
+  const file = {
+    ru: "Mezennoi CV Rus.pdf",
+    en: "Mezennoi CV Eng.pdf",
+    et: "Mezennoi CV Est.pdf"
+  }[this.state.lang] || "Mezennoi CV Rus.pdf";
+  return encodeURI(file);
+}
 
   openCv = () => {
     window.open(this.cvHref(), "_blank", "noopener");
