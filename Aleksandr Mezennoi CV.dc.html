@@ -810,7 +810,7 @@ class Component extends DCLogic {
       showNumbers: this.props.showNumbers ?? true,
       ambientOn: this.props.ambientVideo ?? true,
       ambientSrc: (() => {
-        const raw = (this.props.videoUrl ?? "https://www.youtube.com/watch?v=h7oqtfgvT64").trim();
+        const raw = (this.props.videoUrl ?? "https://www.youtube.com/watch?v=JSa_6BCriaA").trim();
         const m = raw.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{6,})/);
         const id = m ? m[1] : raw;
         return "https://www.youtube.com/embed/" + id +
