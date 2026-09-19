@@ -40,7 +40,8 @@ a:hover{opacity:.55}
 :root[data-theme="light"] [data-m="shade"]{background:linear-gradient(180deg,rgba(244,241,233,0.78),rgba(244,241,233,0.86) 45%,rgba(244,241,233,0.92))!important}
 :root[data-theme="light"] [data-m="ambient"] iframe{filter:blur(14px) saturate(0.8) brightness(1.08)!important;opacity:0.5!important}
 [data-m="theme-btn"],[data-m="lang-btn"]{background:transparent;color:var(--chalk-1)}
-:root[data-lang="en"] [data-m="spaghetti"]{display:block!important}
+:root[data-lang="en"] [data-m="spaghetti"]{display:inline!important}
+[data-m="portrait"] image-slot::part(ring){display:none!important}
 [data-m="plinko-btn"]{transition:background 120ms,color 120ms,opacity 120ms}
 [data-m="plinko-btn"]:hover:not(:disabled){background:var(--chalk-0);color:var(--ink-1)}
 [data-m="plinko-btn"]:focus-visible{outline:1px solid var(--chalk-0);outline-offset:3px}
@@ -167,7 +168,7 @@ a:hover{opacity:.55}
 
 <header data-m="first-screen" style="display:flex;flex-direction:column;min-height:calc(100svh - 58px);padding:clamp(36px,6vw,80px) 0 clamp(20px,3vw,36px)">
 <div data-m="meta-row" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 48px;font:var(--weight-regular) var(--type-meta)/1.5 'Geist Mono','JetBrains Mono',monospace;letter-spacing:var(--track-meta);text-transform:uppercase;color:var(--chalk-1)">
-<div>CV / 2026<br>Таллинн, Эстония</div>
+<div>CV / 2026 <span data-m="spaghetti" style="display:none;font:inherit;letter-spacing:inherit;text-transform:uppercase;color:var(--chalk-1)"><span>/</span> Большой фанат спагетти-вестернов</span><br>Таллинн, Эстония</div>
 <div data-m="right" style="text-align:right">Графический / веб дизайнер<br>IT-специалист<br>И просто хороший чел</div>
 </div>
 <div data-m="hero" style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:32px clamp(28px,4vw,56px);margin-top:clamp(28px,4vw,56px)">
@@ -229,7 +230,6 @@ a:hover{opacity:.55}
 </div>
 </div>
 
-<div data-m="spaghetti" style="display: none; margin-left: 0.4em; font: var(--weight-light) var(--type-meta-s)/1.3 'Geist Mono','JetBrains Mono',monospace; letter-spacing: var(--track-meta-wide); text-transform: uppercase; color: var(--chalk-1)">Большой фанат спагетти-вестернов</div>
 <h1 style="margin: 0; font: var(--weight-bold) clamp(44px,9vw,132px)/0.9 'Schibsted Grotesk','Manrope',Helvetica,Arial,sans-serif; letter-spacing: -0.045em; text-transform: uppercase; color: var(--chalk-0)">Меня зовут<br>саня.</h1>
 </div>
 <div data-m="portrait" style="flex:0 1 clamp(200px,24%,300px);position:relative;aspect-ratio:3/4;filter:{{ portraitFilter }}">
@@ -340,7 +340,7 @@ a:hover{opacity:.55}
 <span style="padding:12px 0;border-bottom:1px solid var(--border-strong);font:var(--weight-medium) clamp(16px,1.4vw,19px)/1.3 'Schibsted Grotesk','Manrope',Helvetica,Arial,sans-serif;letter-spacing:-0.015em">Adobe Photoshop / Illustrator</span>
 <span style="padding:12px 0;border-bottom:1px solid var(--border-strong);font:var(--weight-medium) clamp(16px,1.4vw,19px)/1.3 'Schibsted Grotesk','Manrope',Helvetica,Arial,sans-serif;letter-spacing:-0.015em">Figma / Claude Design</span>
 <span style="padding:12px 0;border-bottom:1px solid var(--border-strong);font:var(--weight-medium) clamp(16px,1.4vw,19px)/1.3 'Schibsted Grotesk','Manrope',Helvetica,Arial,sans-serif;letter-spacing:-0.015em">Graphic / Web / Packaging</span>
-<span style="padding:12px 0;border-bottom:1px solid var(--border-strong);font:var(--weight-medium) clamp(16px,1.4vw,19px)/1.3 'Schibsted Grotesk','Manrope',Helvetica,Arial,sans-serif;letter-spacing:-0.015em">Branding / SMM / IT / SEO</span>
+<span style="padding:12px 0;border-bottom:1px solid var(--border-strong);font:var(--weight-medium) clamp(16px,1.4vw,19px)/1.3 'Schibsted Grotesk','Manrope',Helvetica,Arial,sans-serif;letter-spacing:-0.015em">Branding / SMM / SEO</span>
 </div>
 </div>
 <div style="flex:1 1 200px;display:flex;flex-direction:column;gap:18px">
